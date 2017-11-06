@@ -5,18 +5,6 @@
 //#include <CheapStepper.h>
 
 class TaMatisse {
-
-public:
-  TaMatisse();
-  ~TaMatisse();
-
-  // paints a straight line (by default 50mm long)
-  void graduusMoole(int mm = 50);
-  // paints a left curve, by default by 90 degree
-  void linksKurveMoole(int degree = 90);
-  // paints a right curve, by default by 90 degree
-  void rechtsKurveMoole(int degree = 90);
-private:
   // setting the const for CW turning
   const boolean MOVE_CLOCKWISE = true;
   // setting the const for CCW turning
@@ -29,9 +17,28 @@ private:
   const int WAIT_AFTER_PRIMITIVE = 1000;
   // distance between the two wheel (for drawing curves)
   const float WHEEL_DISTANCE = 118.82;
+
+public:
+  TaMatisse();
+  ~TaMatisse();
+
+  // paints a straight line (by default 50mm long)
+  void graduusMoole(int mm = 50);
+  // paints a left curve, by default by 90 degree
+  void linksKurveMoole(int degree = 90);
+  // paints a right curve, by default by 90 degree
+  void rechtsKurveMoole(int degree = 90);
+  // turn left on the spot
+  void ufEmPunktNachLinksDreie(int degree = 90);
+  // turn right on the spot
+  void ufEmPunktNachRechtsDreie(int degree = 90);
+private:
+
   // both stepper motors
-  CheapStepper *stepper_L;
-  CheapStepper *stepper_R;
+  CheapStepper *motor_L;
+  CheapStepper *motor_R;
+
+  int calculateSteps (int mm);
 };
 
 #endif
