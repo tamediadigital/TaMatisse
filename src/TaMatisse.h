@@ -32,6 +32,11 @@ public:
   void ufEmPunktNachLinksDreie(float degree = 90.0);
   // turn right on the spot
   void ufEmPunktNachRechtsDreie(float degree = 90.0);
+  // turn left in a bow around a spot radius mm away
+  void bogeNachLinksMoole(float degree = 90.0, float radius = 10.0);
+  // turn right in a bow around a spot radius mm away
+  void bogeNachRechtsMoole(float degree = 90.0, float radius = 10.0);
+
 private:
 
   // both stepper motors

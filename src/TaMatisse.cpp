@@ -67,6 +67,39 @@ void TaMatisse::ufEmPunktNachRechtsDreie (float degree) {
   delay(WAIT_AFTER_PRIMITIVE);
 }
 
+void TaMatisse::bogeNachLinksMoole(float degree, float radius) {
+  int stepsLeft = calculateSteps(PI * 2 * radius * degree / 360.0);
+  int stepsRight = calculateSteps(PI * 2 * (radius + WHEEL_DISTANCE) * degree / 360.0);
+  float incLeft = (float)stepsLeft / stepsRight;
+  float leftStepped = 0;
+
+  for (int right=0, left=0; right < stepsRight; right++) {
+    motor_R->step(MOVE_CLOCKWISE);
+    leftStepped += incLeft;
+    if (roundf(leftStepped) > left) {
+      motor_L->step(MOVE_COUNTERCLOCKWISE);
+      left++;
+    }
+  }
+  delay(WAIT_AFTER_PRIMITIVE);
+}
+void TaMatisse::bogeNachRechtsMoole (float degree, float radius) {
+  int stepsRight = calculateSteps(PI * 2 * radius * degree / 360.0);
+  int stepsLeft = calculateSteps(PI * 2 * (radius + WHEEL_DISTANCE) * degree / 360.0);
+  float incRight = (float)stepsRight / stepsLeft;
+  float rightStepped = 0;
+
+  for (int left=0, right=0; left < stepsLeft; left++) {
+    motor_L->step(MOVE_COUNTERCLOCKWISE);
+    rightStepped += incRight;
+    if (roundf(rightStepped) > right) {
+      motor_R->step(MOVE_CLOCKWISE);
+      right++;
+    }
+  }
+  delay(WAIT_AFTER_PRIMITIVE);
+}
+
 /////////////
 // PRIVATE //
 /////////////
