@@ -76,8 +76,11 @@ void TaMatisse::bogeNachLinksMoole(float degree, float radius) {
   for (int right=0, left=0; right < stepsRight; right++) {
     motor_R->step(MOVE_CLOCKWISE);
     leftStepped += incLeft;
-    if (roundf(leftStepped) > left) {
-      motor_L->step(MOVE_COUNTERCLOCKWISE);
+    if (abs(roundf(leftStepped)) > left) {
+      if (stepsLeft < 0)
+        motor_L->step(MOVE_CLOCKWISE);
+      else
+        motor_L->step(MOVE_COUNTERCLOCKWISE);
       left++;
     }
   }
@@ -92,8 +95,11 @@ void TaMatisse::bogeNachRechtsMoole (float degree, float radius) {
   for (int left=0, right=0; left < stepsLeft; left++) {
     motor_L->step(MOVE_COUNTERCLOCKWISE);
     rightStepped += incRight;
-    if (roundf(rightStepped) > right) {
-      motor_R->step(MOVE_CLOCKWISE);
+    if (abs(roundf(rightStepped)) > right) {
+      if (stepsRight < 0)
+        motor_R->step(MOVE_COUNTERCLOCKWISE);
+      else
+        motor_R->step(MOVE_CLOCKWISE);
       right++;
     }
   }
