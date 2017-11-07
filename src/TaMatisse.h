@@ -23,22 +23,27 @@ public:
   ~TaMatisse();
 
   // paints a straight line (by default 50mm long)
-  void graduusMoole(int mm = 50);
+  void graduusMoole(float mm = 50.0);
   // paints a left curve, by default by 90 degree
-  void linksKurveMoole(int degree = 90);
+  void linksKurveMoole(float degree = 90.0);
   // paints a right curve, by default by 90 degree
-  void rechtsKurveMoole(int degree = 90);
+  void rechtsKurveMoole(float degree = 90.0);
   // turn left on the spot
-  void ufEmPunktNachLinksDreie(int degree = 90);
+  void ufEmPunktNachLinksDreie(float degree = 90.0);
   // turn right on the spot
-  void ufEmPunktNachRechtsDreie(int degree = 90);
+  void ufEmPunktNachRechtsDreie(float degree = 90.0);
+  // turn left in a bow around a spot radius mm away
+  void bogeNachLinksMoole(float degree = 90.0, float radius = 10.0);
+  // turn right in a bow around a spot radius mm away
+  void bogeNachRechtsMoole(float degree = 90.0, float radius = 10.0);
+
 private:
 
   // both stepper motors
   CheapStepper *motor_L;
   CheapStepper *motor_R;
 
-  int calculateSteps (int mm);
+  int calculateSteps (float mm);
 };
 
 #endif
