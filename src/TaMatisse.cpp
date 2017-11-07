@@ -66,6 +66,17 @@ void TaMatisse::ufEmPunktNachRechtsDreie (int degree) {
   }
   delay(WAIT_AFTER_PRIMITIVE);
 }
+//
+// void TaMatisse:rotateAroundDistantPointToTheLeft (int degree, int displacement) {
+//   int stepsLeft = calculateSteps((displacement - (WHEEL_DISTANCE / 2)) * PI * 2 / (360 / degree));
+//   int stepsRight = calculateSteps((displacement - (WHEEL_DISTANCE / 2)) * PI * 2 / (360 / degree));
+//
+// }
+//
+// void TaMatisse:triangle () {
+//
+//
+// }
 
 /////////////
 // PRIVATE //

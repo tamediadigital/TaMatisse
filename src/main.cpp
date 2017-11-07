@@ -7,18 +7,16 @@ TaMatisse werdBot;
 void setup() {
 }
 
+
 void loop() {
-  // draw an 8 on the floor. Run for cover. :)
-  for (int i=0; i<4; i++) {
-    // turn left
-    werdBot.linksKurveMoole(90);
-    // go straight, paint 50mm line
-    werdBot.graduusMoole(50);
+  // triangle
+  for (int i=0; i<3; i++) {
+    werdBot.graduusMoole(90);
+    werdBot.ufEmPunktNachRechtsDreie(120);
   }
-  for (int i=0; i<4; i++) {
-    // turn right
-    werdBot.rechtsKurveMoole(90);
-    // go straight, paint 50mm line
-    werdBot.graduusMoole(50);
-  }
+  werdBot.ufEmPunktNachRechtsDreie(180);
+  werdBot.graduusMoole(30);
+  werdBot.ufEmPunktNachRechtsDreie(120);
+  werdBot.graduusMoole(30);
+
 }
