@@ -13,7 +13,7 @@ So we continued improving the design until we [finalized the chassis](https://dr
 
 We were particularly impressed with the [precision](https://drive.google.com/open?id=0BwoCo__hMSJ6eWh6UDM4QzQtRDBOaHNTTVJySDduU3U4T1pR) in the first test run and so we started getting creative, teaching TaMatisse a lot of [new patterns](https://drive.google.com/open?id=1D4qrHpUrIhioHyt2ebI3qsHQg5HWzTjb) to draw more and more complicated pictures.
 
-We programmed TaMatisse using primitive data types, i.e. the basic storage mechanism for the Arduino syntax. These basic data types hold the information of the program and allow the programmer to create variables that change value and produce different designs. 
+We've created a small library that holds some geometrical primitives (straight line, curve,....) that can be used to draw larger, more complex drawings.
 
 We want to have the kids figure out the right sequence and parameters for these primitives in order to produce shapes as simple as squares and circles up to more complex ones such as stars or flowers.
 
