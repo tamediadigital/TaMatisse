@@ -5,16 +5,10 @@
 // Simple example for driving the TaMatisse, our little painting bot around
 TaMatisse werdBot;
 
-long f(long n = 0);
-double squareGrowth(double n = 1);
+long f(long n);
+double squareGrowth(double n);
 
 void setup() {
-}
-
-void loop() {
-  //paint8();
-  //f();
-  squareGrowth(10);
 }
 
 long f(long n = 0) {
@@ -53,4 +47,53 @@ void paint8() {
     // go straight, paint 50mm line
     werdBot.graduusMoole(50);
   }
+}
+
+void schnaegg(void) {
+  for (int i = 1; i < 10; i++) {
+    werdBot.bogeNachLinksMoole(180.0, 20.0*i);
+  }
+}
+
+void t(void) {
+  werdBot.warte(4);
+
+  werdBot.graduusMoole(130);
+  werdBot.ufEmPunktNachLinksDreie(90);
+  werdBot.graduusMoole(40);
+  werdBot.bogeNachRechtsMoole(90, 10);
+  werdBot.graduusMoole(20);
+  werdBot.bogeNachRechtsMoole(48, 10);
+  werdBot.graduusMoole(156);
+  werdBot.bogeNachRechtsMoole(42, 10);
+  werdBot.graduusMoole(10);
+  werdBot.bogeNachRechtsMoole(90, 10);
+  werdBot.graduusMoole(70);
+  werdBot.ufEmPunktNachLinksDreie(90);
+  werdBot.graduusMoole(76);
+  werdBot.bogeNachRechtsMoole(90, 10);
+  werdBot.graduusMoole(50);
+  werdBot.bogeNachRechtsMoole(90, 10);
+  werdBot.graduusMoole(76);
+  werdBot.ufEmPunktNachLinksDreie(90);
+  werdBot.graduusMoole(80);
+  werdBot.bogeNachLinksMoole(90, 30);
+  werdBot.bogeNachLinksMoole(27, 106);
+  werdBot.bogeNachRechtsMoole(117, 10);
+  werdBot.graduusMoole(60);
+  werdBot.bogeNachRechtsMoole(59, 10);
+  werdBot.bogeNachRechtsMoole(61, 136);
+  werdBot.bogeNachRechtsMoole(60, 70);
+
+  werdBot.fertig();
+}
+
+
+
+void loop() {
+  paint8();
+  //f();
+  //squareGrowth(10);
+  //t();
+  //schnaegg();
 }
