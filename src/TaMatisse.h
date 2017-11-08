@@ -36,6 +36,10 @@ public:
   void bogeNachLinksMoole(float degree = 90.0, float radius = 10.0);
   // turn right in a bow around a spot radius mm away
   void bogeNachRechtsMoole(float degree = 90.0, float radius = 10.0);
+  // wait specified amount of seconds before moving on
+  void warte(int seconds);
+  // stop execution
+  void fertig (void);
 
 private:
 
