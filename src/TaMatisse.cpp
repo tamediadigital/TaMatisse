@@ -53,7 +53,7 @@ void TaMatisse::ufEmPunktNachLinksDreie (float degree) {
   int steps = calculateSteps((WHEEL_DISTANCE / 2) * PI * 2 / (360.0 / degree));
   for (int s=0; s<steps; s++){
      motor_L->step(MOVE_CLOCKWISE);
-     motor_R->step(MOVE_COUNTERCLOCKWISE);
+     motor_R->step(MOVE_CLOCKWISE);
   }
   delay(WAIT_AFTER_PRIMITIVE);
 }
@@ -62,7 +62,7 @@ void TaMatisse::ufEmPunktNachRechtsDreie (float degree) {
   int steps = calculateSteps((WHEEL_DISTANCE / 2) * PI * 2 / (360.0 / degree));
   for (int s=0; s<steps; s++){
      motor_L->step(MOVE_COUNTERCLOCKWISE);
-     motor_R->step(MOVE_CLOCKWISE);
+     motor_R->step(MOVE_COUNTERCLOCKWISE);
   }
   delay(WAIT_AFTER_PRIMITIVE);
 }

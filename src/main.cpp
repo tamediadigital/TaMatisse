@@ -1,24 +1,37 @@
 #include <Arduino.h>
 #include "TaMatisse.h"
+#include <math.h>
 
 // Simple example for driving the TaMatisse, our little painting bot around
 TaMatisse werdBot;
 
 long f(long n = 0);
+double squareGrowth(double n = 1);
 
 void setup() {
 }
 
 void loop() {
   //paint8();
-  f();
+  //f();
+  squareGrowth(10);
 }
 
 long f(long n = 0) {
-  int radius = n;
+  long radius = n;
   int angle = 90;
   werdBot.bogeNachLinksMoole(angle, radius);
   return f(n+n+1);
+}
+
+double squareGrowth(double n = 1) {
+  for(int i = 0; i < 4; i++) {
+    werdBot.graduusMoole(n);
+    werdBot.ufEmPunktNachLinksDreie(90);
+  }
+  werdBot.ufEmPunktNachLinksDreie(45);
+
+  return squareGrowth(sqrt(2*(n*n)));
 }
 
 void box() {
