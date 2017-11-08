@@ -88,6 +88,15 @@ void t(void) {
   werdBot.fertig();
 }
 
+void calibrate(void) {
+  werdBot.graduusMoole(100);
+  for (int i = 0; i < 10; i++)
+    werdBot.ufEmPunktNachLinksDreie(360);
+  werdBot.graduusMoole(200);
+  for (int i = 0; i < 10; i++)
+    werdBot.ufEmPunktNachRechtsDreie(360);
+  werdBot.graduusMoole(100);
+}
 
 
 void loop() {
