@@ -181,15 +181,15 @@ void huesli(float width) {
   werdBot.graduusMoole(width);
   // first diagonal
   werdBot.ufEmPunktNachRechtsDreie(135.0);
-  werdBot.graduusMoole(sqrt(width));
-  // roof
+  werdBot.graduusMoole(sqrt(2*(width*width)));
+  // roofs
   werdBot.ufEmPunktNachRechtsDreie(90.0);
-  werdBot.graduusMoole(width);
+  werdBot.graduusMoole(sqrt(2*((width/2)*(width/2))));
   werdBot.ufEmPunktNachRechtsDreie(90.0);
-  werdBot.graduusMoole(width);
+  werdBot.graduusMoole(sqrt(2*((width/2)*(width/2))));
   // final diagonal
   werdBot.ufEmPunktNachRechtsDreie(90.0);
-  werdBot.graduusMoole(sqrt(width));
+  werdBot.graduusMoole(sqrt(2*(width*width)));
 }
 
 /*
