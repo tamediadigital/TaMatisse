@@ -2,7 +2,6 @@
 #define TAMATISSE_H
 
 #include "CheapStepper.h"
-//#include <CheapStepper.h>
 
 class TaMatisse {
   // setting the const for CW turning
