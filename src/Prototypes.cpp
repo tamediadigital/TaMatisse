@@ -62,7 +62,7 @@ void achti(void) {
 }
 
 
-void hertz() {
+void herz() {
   werdBot.linksKurveMoole(180);
   werdBot.graduusMoole(werdBot.radAbstand());
   werdBot.ufEmPunktNachLinksDreie(90);

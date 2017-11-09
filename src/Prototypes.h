@@ -15,12 +15,8 @@ void box(float mm);
 /* draw an 8 */
 void achti(void);
 
-<<<<<<< HEAD
 /* draw an heart */
 void herz(void);
-=======
-void hertz(void);
->>>>>>> 43d131e16c32ab7fdab33ceb3e1ef4193ab2f126
 
 void drueegg(void);
 
