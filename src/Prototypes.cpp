@@ -14,7 +14,7 @@ extern TaMatisse werdBot;
 /*
  * running for cover following the path of the golden spiral
  */
-long f(long f1 = 0, long f2 = 1) {
+long f(long f1, long f2) {
   int angle = 90;
   //std::cout << "f1:" << f1 << "/f2:" << f2 << " --- ";
   werdBot.bogeNachLinksMoole(angle, f1);
@@ -105,7 +105,7 @@ void eifachiChriesi(void) {
   werdBot.fertig();
 }
 
-void laesigiChriesi(void) {
+void laessigiChriesi(void) {
   // start with the red pen
   werdBot.linksKurveMoole(360);
   // wait for 2 seconds, so you can change from the red pen to the green one!

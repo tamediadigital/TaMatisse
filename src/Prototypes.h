@@ -23,7 +23,7 @@ void davidStern(void);
 
 void eifachiChriesi(void);
 
-void laesigiChriesi(void);
+void laessigiChriesi(void);
 
 /* draw an outgoing spiral based on half circles for runde turns */
 void schnaegg(int runde);
