@@ -11,7 +11,7 @@
 */
 
 
-#include "Arduino.h"
+#include <Arduino.h>
 #include "TaMatisse.h"
 
 TaMatisse::~TaMatisse () {
@@ -87,6 +87,7 @@ void TaMatisse::bogeNachLinksMoole(float degree, float radius) {
   }
   delay(WAIT_AFTER_PRIMITIVE);
 }
+
 void TaMatisse::bogeNachRechtsMoole (float degree, float radius) {
   int stepsRight = calculateSteps(PI * 2 * (radius -  WHEEL_DISTANCE / 2) * degree / 360.0);
   int stepsLeft = calculateSteps(PI * 2 * (radius +  WHEEL_DISTANCE / 2) * degree / 360.0);
@@ -105,6 +106,16 @@ void TaMatisse::bogeNachRechtsMoole (float degree, float radius) {
     }
   }
   delay(WAIT_AFTER_PRIMITIVE);
+}
+
+void TaMatisse::warte(int seconds) {
+  for (int i = 0; i < seconds; i++)
+    delay(1000);
+}
+
+void TaMatisse::fertig (void) {
+  for (;;)
+    delay(3600UL * 1000);
 }
 
 /////////////
