@@ -33,6 +33,7 @@ void box(float mm) {
     werdBot.ufEmPunktNachLinksDreie(90);
     werdBot.graduusMoole(mm);
   }
+  werdBot.fertig();
 }
 
 /* draw an  8 */
@@ -50,6 +51,7 @@ void achti(void) {
     // go straight, paint 50mm line
     werdBot.graduusMoole(50);
   }
+  werdBot.fertig();
 }
 
 
@@ -59,6 +61,7 @@ void hertz() {
   werdBot.ufEmPunktNachLinksDreie(90);
   werdBot.graduusMoole(118.82);
   werdBot.linksKurveMoole(180);
+  werdBot.fertig();
 }
 
 void drueegg() {
@@ -66,9 +69,10 @@ void drueegg() {
     werdBot.ufEmPunktNachRechtsDreie(120);
     werdBot.graduusMoole(90);
   }
+  werdBot.fertig();
 }
 
-void davidstern() {
+void davidStern() {
    // let the loop run twice!
 
   for (int i=0; i<3; i++) {
@@ -80,6 +84,18 @@ void davidstern() {
   werdBot.graduusMoole(30);
   werdBot.ufEmPunktNachLinksDreie(60);
   werdBot.graduusMoole(30);
+  werdBot.fertig();
+}
+
+void eifachiChriesi(void) {
+  werdBot.linksKurveMoole(360);
+  werdBot.ufEmPunktNachRechtsDreie(90);
+  werdBot.graduusMoole(200);
+  werdBot.ufEmPunktNachRechtsDreie(150);
+  werdBot.graduusMoole(200);
+  werdBot.ufEmPunktNachLinksDreie(90);
+  werdBot.rechtsKurveMoole(360);
+  werdBot.fertig();
 }
 
 /* draw an outgoing spiral based on half circles for runde turns */
@@ -87,6 +103,7 @@ void schnaegg(int runde = 5) {
   for (int i = 1; i < runde * 2; i++) {
     werdBot.bogeNachLinksMoole(180.0, 20.0*i);
   }
+  werdBot.fertig();
 }
 
 /* try to draw something the resembles the tutti.ch t-logo */
