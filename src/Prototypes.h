@@ -5,7 +5,8 @@
 */
 
 /* functions to draw a fibonacci spiral */
-long f(long n);
+long f(long f1 = 0, long f2 = 1);
+
 double squareGrowth(double n);
 
 /* draw a box with mm size */
@@ -14,16 +15,23 @@ void box(float mm);
 /* draw an 8 */
 void achti(void);
 
+<<<<<<< HEAD
 /* draw an heart */
 void herz(void);
+=======
+void hertz(void);
+>>>>>>> 43d131e16c32ab7fdab33ceb3e1ef4193ab2f126
 
 void drueegg(void);
+
+/* print regular egge-side shapes with mm size */
+void mehregg(int egge, float mm);
 
 void davidStern(void);
 
 void eifachiChriesi(void);
 
-void laesigiChriesi(void);
+void laessigiChriesi(void);
 
 /* draw an outgoing spiral based on half circles for runde turns */
 void schnaegg(int runde);

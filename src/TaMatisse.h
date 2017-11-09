@@ -15,7 +15,11 @@ class TaMatisse {
   // wait for # ms after drawing a primitive
   const int WAIT_AFTER_PRIMITIVE = 1000;
   // distance between the two wheel (for drawing curves)
+<<<<<<< HEAD
   const float WHEEL_DISTANCE = 135;
+=======
+  const float WHEEL_DISTANCE = 137.0;
+>>>>>>> 43d131e16c32ab7fdab33ceb3e1ef4193ab2f126
 
 public:
   TaMatisse();
@@ -39,6 +43,8 @@ public:
   void warte(int seconds);
   // stop execution
   void fertig (void);
+  // get the WHEEL_DISTANCE
+  float radAbstand(void);
 
 private:
 

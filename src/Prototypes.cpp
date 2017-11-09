@@ -10,13 +10,20 @@
 extern TaMatisse werdBot;
 
 /* functions to draw a fibonacci spiral */
-long f(long n = 0) {
-  long radius = n;
+
+/*
+ * running for cover following the path of the golden spiral
+ */
+long f(long f1, long f2) {
   int angle = 90;
-  werdBot.bogeNachLinksMoole(angle, radius);
-  return f(n+n+1);
+  //std::cout << "f1:" << f1 << "/f2:" << f2 << " --- ";
+  werdBot.bogeNachLinksMoole(angle, f1);
+  return f(f2, f1 >= 1 ? f1 + f2 : 1);
 }
 
+/*
+ * Attention -> experimental(!)
+ */
 double squareGrowth(double n = 1) {
   for(int i = 0; i < 4; i++) {
     werdBot.graduusMoole(n);
@@ -57,9 +64,9 @@ void achti(void) {
 
 void hertz() {
   werdBot.linksKurveMoole(180);
-  werdBot.graduusMoole(118.82);
+  werdBot.graduusMoole(werdBot.radAbstand());
   werdBot.ufEmPunktNachLinksDreie(90);
-  werdBot.graduusMoole(118.82);
+  werdBot.graduusMoole(werdBot.radAbstand());
   werdBot.linksKurveMoole(180);
   werdBot.fertig();
 }
@@ -70,6 +77,16 @@ void drueegg() {
     werdBot.graduusMoole(90);
   }
   werdBot.fertig();
+}
+
+/* print regular egge-side shapes with mm size */
+void mehregg(int egge, float mm) {
+  float winkel = 360.0 / egge;
+
+  for (int i = 0; i < egge; i++) {
+    werdBot.ufEmPunktNachRechtsDreie(winkel);
+    werdBot.graduusMoole(mm);
+  }
 }
 
 void davidStern() {
@@ -98,7 +115,7 @@ void eifachiChriesi(void) {
   werdBot.fertig();
 }
 
-void laesigiChriesi(void) {
+void laessigiChriesi(void) {
   // start with the red pen
   werdBot.linksKurveMoole(360);
   // wait for 2 seconds, so you can change from the red pen to the green one!
@@ -174,15 +191,15 @@ void huesli(float width) {
   werdBot.graduusMoole(width);
   // first diagonal
   werdBot.ufEmPunktNachRechtsDreie(135.0);
-  werdBot.graduusMoole(sqrt(width));
-  // roof
+  werdBot.graduusMoole(sqrt(2*(width*width)));
+  // roofs
   werdBot.ufEmPunktNachRechtsDreie(90.0);
-  werdBot.graduusMoole(10.0);
+  werdBot.graduusMoole(sqrt(2*((width/2)*(width/2))));
   werdBot.ufEmPunktNachRechtsDreie(90.0);
-  werdBot.graduusMoole(10.0);
+  werdBot.graduusMoole(sqrt(2*((width/2)*(width/2))));
   // final diagonal
   werdBot.ufEmPunktNachRechtsDreie(90.0);
-  werdBot.graduusMoole(sqrt(width));
+  werdBot.graduusMoole(sqrt(2*(width*width)));
 }
 
 void leftCap(void) {
@@ -221,16 +238,10 @@ void tamediaLogo() {
 }
 
 /*
- * calibrate draws a line turns 10 times to the left draws a nother line,
- * turns 10 time to right and then draws another line. This should allow
- * to calibrate the WHEEL_DISTANCE of a bot properly.
+ * calibrate by drawing a figure 8
  */
 void calibrate(void) {
-  werdBot.graduusMoole(100);
-  for (int i = 0; i < 10; i++)
-    werdBot.ufEmPunktNachLinksDreie(360);
-  werdBot.graduusMoole(200);
-  for (int i = 0; i < 10; i++)
-    werdBot.ufEmPunktNachRechtsDreie(360);
-  werdBot.graduusMoole(100);
+  werdBot.linksKurveMoole(360);
+  werdBot.rechtsKurveMoole(360);
+  werdBot.fertig();
 }
