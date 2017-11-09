@@ -98,6 +98,21 @@ void eifachiChriesi(void) {
   werdBot.fertig();
 }
 
+void laesigiChriesi(void) {
+  // start with the red pen
+  werdBot.linksKurveMoole(360);
+  // wait for 2 seconds, so you can change from the red pen to the green one!
+  werdBot.warte(2);
+  werdBot.ufEmPunktNachRechtsDreie(45);
+  werdBot.bogeNachLinksMoole(30, 132.82 * 3);
+  werdBot.ufEmPunktNachRechtsDreie(180);
+  werdBot.bogeNachLinksMoole(30, 132.82 * 3);
+  // change back to the green pen
+  werdBot.warte(2);
+  werdBot.ufEmPunktNachLinksDreie(45);
+  werdBot.rechtsKurveMoole(360);
+  werdBot.fertig();
+}
 /* draw an outgoing spiral based on half circles for runde turns */
 void schnaegg(int runde = 5) {
   for (int i = 1; i < runde * 2; i++) {
