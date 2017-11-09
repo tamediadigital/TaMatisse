@@ -11,13 +11,19 @@ double squareGrowth(double n);
 void setup() {
 }
 
-long f(long n = 0) {
-  long radius = n;
+/*
+ * running for cover following the path of the golden spiral
+ */
+long f(long f1 = 0, long f2 = 1) {
   int angle = 90;
-  werdBot.bogeNachLinksMoole(angle, radius);
-  return f(n+n+1);
+  //std::cout << "f1:" << f1 << "/f2:" << f2 << " --- ";
+  werdBot.bogeNachLinksMoole(angle, f1);
+  return f(f2, f1 >= 1 ? f1 + f2 : 1);
 }
 
+/*
+ * Attention -> experimental(!)
+ */
 double squareGrowth(double n = 1) {
   for(int i = 0; i < 4; i++) {
     werdBot.graduusMoole(n);
