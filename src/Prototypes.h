@@ -5,7 +5,7 @@
 */
 
 /* functions to draw a fibonacci spiral */
-long f(long n);
+long f(long f1 = 0, long f2 = 1)
 double squareGrowth(double n);
 
 /* draw a box with mm size */
