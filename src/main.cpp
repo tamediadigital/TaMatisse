@@ -4,19 +4,23 @@
 // Simple example for driving the TaMatisse, our little painting bot around
 TaMatisse werdBot;
 
+// list of built-in functions
+// painting functions
+// werdbot.graduusMoole(mm)
+// werdbot.linksKurveMoole(deg)
+// werdbot.rechtsKurveMoole(deg)
+// werdbot.bogeNachLinksMoole(deg,mm)
+// werdbot.bogeNachRechtsMoole(deg, mm)
+// non-painting functions
+// werdbot.ufEmPunktNachLinksDreie(deg)
+// werdbot.ufEmPunktNachRechtsDreie(deg)
+
+
 void setup() {
+
 }
 
 
 void loop() {
-  // triangle
-  for (int i=0; i<3; i++) {
-    werdBot.graduusMoole(90);
-    werdBot.ufEmPunktNachRechtsDreie(120);
-  }
-  werdBot.ufEmPunktNachRechtsDreie(180);
-  werdBot.graduusMoole(30);
-  werdBot.ufEmPunktNachRechtsDreie(120);
-  werdBot.graduusMoole(30);
 
 }

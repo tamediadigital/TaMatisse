@@ -53,7 +53,7 @@ void TaMatisse::ufEmPunktNachLinksDreie (float degree) {
   int steps = calculateSteps((WHEEL_DISTANCE / 2) * PI * 2 / (360.0 / degree));
   for (int s=0; s<steps; s++){
      motor_L->step(MOVE_CLOCKWISE);
-     motor_R->step(MOVE_COUNTERCLOCKWISE);
+     motor_R->step(MOVE_CLOCKWISE);
   }
   delay(WAIT_AFTER_PRIMITIVE);
 }
@@ -62,21 +62,11 @@ void TaMatisse::ufEmPunktNachRechtsDreie (float degree) {
   int steps = calculateSteps((WHEEL_DISTANCE / 2) * PI * 2 / (360.0 / degree));
   for (int s=0; s<steps; s++){
      motor_L->step(MOVE_COUNTERCLOCKWISE);
-     motor_R->step(MOVE_CLOCKWISE);
+     motor_R->step(MOVE_COUNTERCLOCKWISE);
   }
   delay(WAIT_AFTER_PRIMITIVE);
 }
-//
-// void TaMatisse:rotateAroundDistantPointToTheLeft (int degree, int displacement) {
-//   int stepsLeft = calculateSteps((displacement - (WHEEL_DISTANCE / 2)) * PI * 2 / (360 / degree));
-//   int stepsRight = calculateSteps((displacement - (WHEEL_DISTANCE / 2)) * PI * 2 / (360 / degree));
-//
-// }
-//
-// void TaMatisse:triangle () {
-//
-//
-// }
+
 
 void TaMatisse::bogeNachLinksMoole(float degree, float radius) {
   int stepsLeft = calculateSteps(PI * 2 * (radius -  WHEEL_DISTANCE / 2) * degree / 360.0);
