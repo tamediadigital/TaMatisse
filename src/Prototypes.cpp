@@ -79,6 +79,16 @@ void drueegg() {
   werdBot.fertig();
 }
 
+/* print regular egge-side shapes with mm size */
+void mehregg(int egge, float mm) {
+  float winkel = 360.0 / egge;
+
+  for (int i = 0; i < egge; i++) {
+    werdBot.ufEmPunktNachRechtsDreie(winkel);
+    werdBot.graduusMoole(mm);
+  }
+}
+
 void davidStern() {
    // let the loop run twice!
 

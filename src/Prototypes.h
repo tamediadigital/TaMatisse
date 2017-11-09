@@ -19,6 +19,9 @@ void herz(void);
 
 void drueegg(void);
 
+/* print regular egge-side shapes with mm size */
+void mehregg(int egge, float mm);
+
 void davidStern(void);
 
 void eifachiChriesi(void);
