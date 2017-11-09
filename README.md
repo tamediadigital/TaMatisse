@@ -1,11 +1,11 @@
 #  TaMatisse
 
-TaMatisse aka the Tamedia Robo-Painter is a small Arduino painting robot that has been developed for the Zukunftstag 2017 at Tamedia. 
-The Zukuntfstag is a special day in Switzerland where 10-12 year old kids join their parents at work to get an impression of what their working day looks like.
+TaMatisse aka the Tamedia Robo-Painter is a small Arduino painting robot that has been developed for the Zukunftstag 2017 at Tamedia.
+The Zukunftstag is a special day in Switzerland where 10-12 year old kids join their parents at work to get an impression of what their working day looks like.
 
 The name of this project is inspired by [Henri Matisse](https://en.wikipedia.org/wiki/Henri_Matisse) - so our bots have somebody to look up to.
 
-For this project, we designed the robots from scratch, 3D-printed the chassis and the wheels and powered them with an Arduino board and motors. We went through a number of iterations starting from [a very rudimental version](https://drive.google.com/open?id=1XHYLBMp3aTwPATsHcA2afbOtKss3Xp65) which gave some [first promising results](https://drive.google.com/open?id=1dIKPrNfxLv_RLu-L1qv47xOSfsh7SLXa). 
+For this project, we designed the robots from scratch, 3D-printed the chassis and the wheels and powered them with an Arduino board and motors. We went through a number of iterations starting from [a very rudimental version](https://drive.google.com/open?id=1XHYLBMp3aTwPATsHcA2afbOtKss3Xp65) which gave some [first promising results](https://drive.google.com/open?id=1dIKPrNfxLv_RLu-L1qv47xOSfsh7SLXa).
 
 That wasn't enough of course!
 
@@ -21,7 +21,7 @@ The extra challenge in this version of TaMatisse is that the marker never leaves
 
 # Technical Specs
 
-If you're intersted to build TaMatisse and try it out for yourself, here's what you need:
+If you're interested to build TaMatisse and try it out for yourself, here's what you need:
 
 * A 3D printer (we'll post some printable STL's of the TaMatisse chassis and wheels at a later stage)
 * Some electronics (we'll provide further details of what we used)
@@ -30,6 +30,4 @@ If you're intersted to build TaMatisse and try it out for yourself, here's what 
 * Whiteboard markers (size is optimized for the lyreco brand)
 * Arduino Primitives. You can use the PlatformIO-IDE (based on Atom) to modify, compile and upload the project to an Arduino. You will find the designs we used in the repository.
 
-Happy painting! 
-
-
+Happy painting!
