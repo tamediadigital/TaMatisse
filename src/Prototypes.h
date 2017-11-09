@@ -19,11 +19,14 @@ void herz(void);
 
 void drueegg(void);
 
+/* print regular egge-side shapes with mm size */
+void mehregg(int egge, float mm);
+
 void davidStern(void);
 
 void eifachiChriesi(void);
 
-void laesigiChriesi(void);
+void laessigiChriesi(void);
 
 /* draw an outgoing spiral based on half circles for runde turns */
 void schnaegg(int runde);

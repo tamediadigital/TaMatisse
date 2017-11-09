@@ -118,6 +118,10 @@ void TaMatisse::fertig (void) {
     delay(3600UL * 1000);
 }
 
+float TaMatisse::radAbstand(void) {
+  return WHEEL_DISTANCE;
+}
+
 /////////////
 // PRIVATE //
 /////////////

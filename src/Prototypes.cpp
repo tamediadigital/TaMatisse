@@ -14,7 +14,7 @@ extern TaMatisse werdBot;
 /*
  * running for cover following the path of the golden spiral
  */
-long f(long f1 = 0, long f2 = 1) {
+long f(long f1, long f2) {
   int angle = 90;
   //std::cout << "f1:" << f1 << "/f2:" << f2 << " --- ";
   werdBot.bogeNachLinksMoole(angle, f1);
@@ -79,6 +79,16 @@ void drueegg() {
   werdBot.fertig();
 }
 
+/* print regular egge-side shapes with mm size */
+void mehregg(int egge, float mm) {
+  float winkel = 360.0 / egge;
+
+  for (int i = 0; i < egge; i++) {
+    werdBot.ufEmPunktNachRechtsDreie(winkel);
+    werdBot.graduusMoole(mm);
+  }
+}
+
 void davidStern() {
    // let the loop run twice!
 
@@ -105,7 +115,7 @@ void eifachiChriesi(void) {
   werdBot.fertig();
 }
 
-void laesigiChriesi(void) {
+void laessigiChriesi(void) {
   // start with the red pen
   werdBot.linksKurveMoole(360);
   // wait for 2 seconds, so you can change from the red pen to the green one!
@@ -193,16 +203,10 @@ void huesli(float width) {
 }
 
 /*
- * calibrate draws a line turns 10 times to the left draws a nother line,
- * turns 10 time to right and then draws another line. This should allow
- * to calibrate the WHEEL_DISTANCE of a bot properly.
+ * calibrate by drawing a figure 8
  */
 void calibrate(void) {
-  werdBot.graduusMoole(100);
-  for (int i = 0; i < 10; i++)
-    werdBot.ufEmPunktNachLinksDreie(360);
-  werdBot.graduusMoole(200);
-  for (int i = 0; i < 10; i++)
-    werdBot.ufEmPunktNachRechtsDreie(360);
-  werdBot.graduusMoole(100);
+  werdBot.linksKurveMoole(360);
+  werdBot.rechtsKurveMoole(360);
+  werdBot.fertig();
 }
