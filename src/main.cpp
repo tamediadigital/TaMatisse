@@ -17,8 +17,8 @@ TaMatisse werdBot;
 // non-painting functions
 // werdbot.ufEmPunktNachLinksDreie(deg)
 // werdbot.ufEmPunktNachRechtsDreie(deg)
-// werdbot.warte
-// werdbot.fertig
+// werdbot.warte()
+// werdbot.fertig()
 
 
 
