@@ -155,7 +155,7 @@ void t(void) {
   werdBot.fertig();
 }
 
-/* 
+/*
  * draw the home of st. nicolaus.
  * SPOILER ALERT: it shows you the solution to the problem ;)
  */
@@ -183,6 +183,41 @@ void huesli(float width) {
   // final diagonal
   werdBot.ufEmPunktNachRechtsDreie(90.0);
   werdBot.graduusMoole(sqrt(width));
+}
+
+void leftCap(void) {
+  werdBot.bogeNachLinksMoole(90, 12);
+  werdBot.graduusMoole(38);
+  werdBot.bogeNachLinksMoole(90, 12);
+}
+// tamediaLogo requires leftCap
+void tamediaLogo() {
+  werdBot.warte(4);
+  werdBot.bogeNachLinksMoole(218, 148);
+  leftCap();
+  werdBot.bogeNachRechtsMoole(218, 88);
+  leftCap();
+
+  // re- position robot
+  werdBot.warte(10);
+
+  leftCap();
+  werdBot.graduusMoole(108);
+  leftCap();
+  werdBot.graduusMoole(108);
+
+  // re- position robot
+  werdBot.warte(10);
+  leftCap();
+  werdBot.bogeNachRechtsMoole(61, 43);
+  werdBot.graduusMoole(133);
+  werdBot.bogeNachLinksMoole(82, 100);
+  leftCap();
+  werdBot.bogeNachRechtsMoole(82, 36);
+  werdBot.graduusMoole(136);
+  werdBot.bogeNachLinksMoole(61, 108);
+
+  werdBot.fertig();
 }
 
 /*

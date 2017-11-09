@@ -14,6 +14,7 @@ void box(float mm);
 /* draw an 8 */
 void achti(void);
 
+/* draw an heart */
 void herz(void);
 
 void drueegg(void);
@@ -32,6 +33,9 @@ void t(void);
 
 /* draw the home of St. Nicolaus */
 void huesli(float width);
+
+/* draw the tamedia logo - it requires the robot to be repositioned twice */
+void tamediaLogo(void);
 
 /*
  * calibrate draws a line turns 10 times to the left draws a nother line,

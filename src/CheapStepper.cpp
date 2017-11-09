@@ -1,4 +1,4 @@
-/*  CheapStepper.cpp - 
+/*  CheapStepper.cpp -
 	v0.2
 	Library for the 28BYJ-48 stepper motor, using ULN2003 driver board
 	https://arduino-info.wikispaces.com/SmallSteppers
@@ -169,7 +169,7 @@ void CheapStepper::step(bool clockwise){
 /////////////
 
 int CheapStepper::calcDelay (int rpm){
-
+	
 	if (rpm < 6) return delay; // will overheat, no change
 	else if (rpm >= 24) return 600; // highest speed
 
