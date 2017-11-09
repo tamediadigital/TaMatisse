@@ -20,6 +20,9 @@ TaMatisse werdBot;
 // werdBot.warte();
 // werdBot.fertig();
 
+// phyiscal constant
+// werdBot.radAbstand();
+
 void setup() {
 
 }
