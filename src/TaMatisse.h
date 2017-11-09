@@ -39,6 +39,8 @@ public:
   void warte(int seconds);
   // stop execution
   void fertig (void);
+  // get the WHEEL_DISTANCE
+  float radAbstand(void);
 
 private:
 
