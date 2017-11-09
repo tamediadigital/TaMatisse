@@ -1,16 +1,20 @@
 #include <Arduino.h>
 #include "TaMatisse.h"
-#include <math.h>
+#include "Prototypes.h"
 
-// Simple example for driving the TaMatisse, our little painting bot around
+/* Simple example for driving the TaMatisse, our little painting bot around */
 TaMatisse werdBot;
 
-long f(long n);
-double squareGrowth(double n);
+// list of built-in functions
 
-void setup() {
-}
+// painting functions
+// werdBot.graduusMoole(mm)
+// werdBot.linksKurveMoole(deg)
+// werdBot.rechtsKurveMoole(deg)
+// werdBot.bogeNachLinksMoole(deg,mm)
+// werdBot.bogeNachRechtsMoole(deg, mm)
 
+<<<<<<< HEAD
 /*
  * running for cover following the path of the golden spiral
  */
@@ -93,22 +97,17 @@ void t(void) {
 
   werdBot.fertig();
 }
+=======
+// non-painting functions
+// werdBot.ufEmPunktNachLinksDreie(deg)
+// werdBot.ufEmPunktNachRechtsDreie(deg)
+// werdBot.warte()
+// werdBot.fertig()
 
-void calibrate(void) {
-  werdBot.graduusMoole(100);
-  for (int i = 0; i < 10; i++)
-    werdBot.ufEmPunktNachLinksDreie(360);
-  werdBot.graduusMoole(200);
-  for (int i = 0; i < 10; i++)
-    werdBot.ufEmPunktNachRechtsDreie(360);
-  werdBot.graduusMoole(100);
+void setup() {
+>>>>>>> 9f345f09657f0ffb60f8de31bd04d1c62be0997c
+
 }
 
-
 void loop() {
-  paint8();
-  //f();
-  //squareGrowth(10);
-  //t();
-  //schnaegg();
 }
