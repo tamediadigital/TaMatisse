@@ -155,6 +155,36 @@ void t(void) {
   werdBot.fertig();
 }
 
+/* 
+ * draw the home of st. nicolaus.
+ * SPOILER ALERT: it shows you the solution to the problem ;)
+ */
+void huesli(float width) {
+  // floor
+  werdBot.ufEmPunktNachLinksDreie(90.0);
+  werdBot.graduusMoole(width);
+  // wall left
+  werdBot.ufEmPunktNachRechtsDreie(90.0);
+  werdBot.graduusMoole(width);
+  // wall top
+  werdBot.ufEmPunktNachRechtsDreie(90.0);
+  werdBot.graduusMoole(width);
+  // wall right
+  werdBot.ufEmPunktNachRechtsDreie(90.0);
+  werdBot.graduusMoole(width);
+  // first diagonal
+  werdBot.ufEmPunktNachRechtsDreie(135.0);
+  werdBot.graduusMoole(sqrt(width));
+  // roof
+  werdBot.ufEmPunktNachRechtsDreie(90.0);
+  werdBot.graduusMoole(10.0);
+  werdBot.ufEmPunktNachRechtsDreie(90.0);
+  werdBot.graduusMoole(10.0);
+  // final diagonal
+  werdBot.ufEmPunktNachRechtsDreie(90.0);
+  werdBot.graduusMoole(sqrt(width));
+}
+
 /*
  * calibrate draws a line turns 10 times to the left draws a nother line,
  * turns 10 time to right and then draws another line. This should allow
