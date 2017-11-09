@@ -18,7 +18,9 @@ void herz(void);
 
 void drueegg(void);
 
-void davidstern(void);
+void davidStern(void);
+
+void eifachiChriesi(void);
 
 /* draw an outgoing spiral based on half circles for runde turns */
 void schnaegg(int runde);
