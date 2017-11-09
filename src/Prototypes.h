@@ -26,6 +26,9 @@ void schnaegg(int runde);
 /* try to draw something the resembles the tutti.ch t-logo */
 void t(void);
 
+/* draw the home of St. Nicolaus */
+void huesli(float width);
+
 /*
  * calibrate draws a line turns 10 times to the left draws a nother line,
  * turns 10 time to right and then draws another line. This should allow
