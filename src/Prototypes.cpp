@@ -203,16 +203,10 @@ void huesli(float width) {
 }
 
 /*
- * calibrate draws a line turns 10 times to the left draws a nother line,
- * turns 10 time to right and then draws another line. This should allow
- * to calibrate the WHEEL_DISTANCE of a bot properly.
+ * calibrate by drawing a figure 8
  */
 void calibrate(void) {
-  werdBot.graduusMoole(100);
-  for (int i = 0; i < 10; i++)
-    werdBot.ufEmPunktNachLinksDreie(360);
-  werdBot.graduusMoole(200);
-  for (int i = 0; i < 10; i++)
-    werdBot.ufEmPunktNachRechtsDreie(360);
-  werdBot.graduusMoole(100);
+  werdBot.linksKurveMoole(360);
+  werdBot.rechtsKurveMoole(360);
+  werdBot.fertig();
 }
