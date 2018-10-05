@@ -26,9 +26,16 @@ TaMatisse::TaMatisse () {
 
 void TaMatisse::graduusMoole (float mm) {
     int steps = calculateSteps(mm);
+
     for (int s=0; s<steps; s++){
-       motor_L->step(MOVE_COUNTERCLOCKWISE);
-       motor_R->step(MOVE_CLOCKWISE);
+      if(mm>=0) {
+        motor_L->step(MOVE_COUNTERCLOCKWISE);
+        motor_R->step(MOVE_CLOCKWISE);
+      }
+      else {
+        motor_L->step(MOVE_CLOCKWISE);
+        motor_R->step(MOVE_COUNTERCLOCKWISE);
+      }
      }
      delay(WAIT_AFTER_PRIMITIVE);
 }
@@ -127,6 +134,6 @@ float TaMatisse::radAbstand(void) {
 /////////////
 
 int TaMatisse::calculateSteps (float mm) {
-  int steps = roundf(mm / ((DIAMETER * PI) / STEPS_PER_ROUND));
+  int steps = abs(roundf(mm / ((DIAMETER * PI) / STEPS_PER_ROUND)));
   return steps;
 }

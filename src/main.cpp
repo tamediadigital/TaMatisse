@@ -28,5 +28,7 @@ void setup() {
 }
 
 void loop() {
+  werdBot.graduusMoole(40);
+  werdBot.graduusMoole(-40);
 
 }
