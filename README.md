@@ -29,5 +29,6 @@ If you're interested to build TaMatisse and try it out for yourself, here's what
 * Batteries
 * Whiteboard markers (size is optimized for the lyreco brand)
 * Arduino Primitives. You can use the PlatformIO-IDE (based on Atom) to modify, compile and upload the project to an Arduino. You will find the designs we used in the repository.
+* For beginners, please refer to [this visual guide](HOWTO.md).
 
 Happy painting!
