@@ -27,6 +27,7 @@ __5. Upload to the Arduino (Atmel AVR)__
 ![7](/doc/images/platformio-7.png)
 
 __5.1. If uploading doesn't work, change the upload target port__
+
 PlatformIO automatically tries to detect which USB serial port to upload to. Sometimes this doesn't work, therefore we have to specify the port in the platformio.ini file.
 
 Find the correct port:
