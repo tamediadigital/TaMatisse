@@ -28,7 +28,7 @@ __5. Upload to the Arduino (Atmel AVR)__
 
 __5.1. If uploading doesn't work, change the upload target port__
 
-PlatformIO automatically tries to detect which USB serial port to upload to. Sometimes this doesn't work, therefore we have to specify the port in the platformio.ini file.
+PlatformIO automatically tries to detect which USB serial port to upload to. Sometimes this doesn't work, therefore we have to specify the port in the platformio.ini file. If you're using OSX it may also be your laptop is missing the right drivers for the CH34x USB to Serial chip in which case you won't see the the 'usbserial' device listed at all - see below.
 
 Find the correct port:
 ![8](/doc/images/platformio-8.png)
@@ -36,5 +36,16 @@ Find the correct port:
 Set new port in platformio.ini:
 ![9](/doc/images/platformio-9.png)
 
-__5.2. Successful upload:__
+__5.2. Install the CH34x USB to Serial Drivers:__
+
+Taken from [this guide](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver)
+
+```
+brew tap mengbo/ch340g-ch34g-ch34x-mac-os-x-driver https://github.com/mengbo/ch340g-ch34g-ch34x-mac-os-x-driver
+brew cask install wch-ch34x-usb-serial-driver
+```
+
+After that you'll need to restart and go back to point 5 above.
+
+__5.3. Successful upload:__
 ![10](/doc/images/platformio-10.png)
