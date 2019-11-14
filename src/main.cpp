@@ -2,33 +2,24 @@
 #include "TaMatisse.h"
 #include "Prototypes.h"
 
-/* Simple example for driving the TaMatisse, our little painting bot around */
 TaMatisse werdBot;
 
-// list of built-in functions
-
-// painting functions
-// werdBot.graduusMoole(mm);
-// werdBot.linksKurveMoole(deg);
-// werdBot.rechtsKurveMoole(deg);
-// werdBot.bogeNachLinksMoole(deg, mm);
-// werdBot.bogeNachRechtsMoole(deg, mm);
-
-// non-painting functions
-// werdBot.ufEmPunktNachLinksDreie(deg);
-// werdBot.ufEmPunktNachRechtsDreie(deg);
-// werdBot.warte();
-// werdBot.fertig();
-
-// phyiscal constant
-// werdBot.radAbstand();
-
-void setup() {
-
+void setup()
+{
+   // Serial.begin(115200);
+   delay(1000);
 }
 
-void loop() {
-  werdBot.graduusMoole(40);
-  werdBot.graduusMoole(-40);
-
+void loop()
+{
+   // Heart
+   // werdBot.graduusMoole(140);
+   // werdBot.bogeNachRechtsMoole(180, 70);
+   // werdBot.ufEmPunktNachLinksDreie(90);
+   // werdBot.bogeNachRechtsMoole(180, 70);
+   // werdBot.graduusMoole(140);
+   // werdBot.ufEmPunktNachLinksDreie(135);
+   // werdBot.graduusMoole(100);
+   werdBot.linksKurveMoole(180);
+   werdBot.rechtsKurveMoole(180);
 }
