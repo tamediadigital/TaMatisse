@@ -23,12 +23,17 @@ The extra challenge in this version of TaMatisse is that the marker never leaves
 
 If you're interested to build TaMatisse and try it out for yourself, here's what you need:
 
-* A 3D printer (we'll post some printable STL's of the TaMatisse chassis and wheels at a later stage)
-* Some electronics (we'll provide further details of what we used)
-* Rubber bands
-* Batteries
+* Access to a 3D printer to print the chassis and the wheels
+* An Arduino Nano (sold in many online stores, https://store.arduino.cc/arduino-nano)
+* 2 x 28BYJ-48 5V Stepper motors with 2 x Uln2003 driver board (buy the board and the board in one package)
+* On/Off Switch (we used Universal Car Styling 16A 12V LED Dot Light Car Boat Round Rocker ON/OFF SPST Switch https://www.aliexpress.com/item/32829587850.html?spm=a2g0s.9042311.0.0.649d4c4dOiJ8gw)
+* Battery-holder (4 x AA, next to each other. We used https://www.aliexpress.com/item/32818907820.html?spm=a2g0s.9042311.0.0.649d4c4dOiJ8gw)
+* Some Dupont Cable 20cm 2.54mm Female-Female - best with color codes.
+* Soldering iron to combine 5V and ground pins of the two stepper motor boards, the Arduino and the battery pack / power switch. 
+* 2 x Rubber bands for around the wheels
+* 4 x AA Batteries
 * Whiteboard markers (size is optimized for the lyreco brand)
-* Arduino Primitives. You can use the PlatformIO-IDE (based on Atom) to modify, compile and upload the project to an Arduino. You will find the designs we used in the repository.
+* PlatformIO-IDE - an opensource IoT platform for compiling the git-repo and upload the code to the bot.
 * For beginners, please refer to [this visual guide](HOWTO.md).
 
 Happy painting!
